@@ -1,0 +1,17 @@
+.menu {
+  color: #898989;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.menu:hover {
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.active {
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

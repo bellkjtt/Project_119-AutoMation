@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'KimjungchulGothic';
+  src: url('../../fonts/KimjungchulGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothicA1-Thin';
+  src: url('../../fonts/GothicA1-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.notice-post-container {
+  width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notice-post-container h2 {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 20px;
+  color: #222f68;
+  background-image: linear-gradient(180deg, #ffffff 0%, #ebedeed0 100%);
+  box-shadow: rgba(51, 51, 51, 0.253) 0px 5px 15px;
+  font-family: 'KimjungchulGothic';
+}
+
+.notice-post-container .desc {
+  gap: 10px;
+  display: flex;
+  justify-content: flex-end;  
+}
+
+.notice-post-container .desc p {
+  font-family: 'GothicA1-Bold';
+}
+
+.notice-post-container button {
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #7e9fce7c 100%);
+  box-shadow: rgba(51, 51, 51, 0.281) 0px 5px 15px;
+  padding: 2px 6px;
+}
+
+.notice-post-container button:hover {
+  background-color: #15437286;
+}

@@ -1,0 +1,57 @@
+.calendar-box {
+  height: 100%;
+  overflow: hidden;
+  font-weight: 700;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.react-calendar {
+  border: none !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* 네비게이션 */
+.react-calendar__navigation {
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #b2d1e069 100%);
+}
+
+.react-calendar__navigation span {
+  font-weight: 900;
+}
+
+/* 요일 */
+.react-calendar__month-view__weekdays {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.react-calendar__month-view__weekdays abbr {
+  font-size: 15px;
+  text-decoration: none;
+}
+
+/* 일 */
+.react-calendar__tile {
+  height: 60px;
+  text-align: center;
+}
+
+/* 마우스 호버 */
+.react-calendar__tile--hover {
+  background-color: #7ea0ceda !important;
+}
+
+/* 오늘 */
+.react-calendar__tile--now {
+  color: black !important;
+  background-color: #D5D9DB62 !important;
+}
+
+/* 추가 글씨 */
+.custom-text {
+  color: gray;
+  font-size: 12px;
+}

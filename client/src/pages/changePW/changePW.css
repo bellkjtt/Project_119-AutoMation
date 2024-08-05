@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KimjungchulGothic';
+  src: url('../../fonts/KimjungchulGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.changepw-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.changepw-bg .backContainer {
+  width: 750px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+.changepw-bg .formContainer {
+  width: 500px;
+  height: 300px; 
+  border-radius: 30px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.changepw-bg .title {
+  font-family: 'KimjungchulGothic';
+  font-size: 34px;
+  font-weight: bold;
+  color: #675C58;
+  margin-bottom: 20px;
+}
+
+.changepw-bg .description {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  color: #675C58;
+  font-weight: bold;
+}
+
+.changepw-bg .form {
+  width: 400px;
+  display: flex;
+  flex-direction: column; 
+  gap: 5px;
+}
+
+.changepw-bg .changepw-inputGroup {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+.changepw-bg .form label {
+  display: inline-block;
+  width: 90px;
+  position: relative; 
+  padding: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: black;
+  border-radius: 165px;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #d2d5d6d0 100%);
+  box-shadow: rgba(97, 97, 97, 0.35) 0px 5px 15px;
+  margin-right: 1px;
+  text-align: center;
+}
+
+.changepw-bg .form input {
+  width: 100%; 
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #f1f5f6;
+  background-color: white;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+}
+
+.changepw-bg .form input:hover {
+  box-shadow: 0 0 5px rgba(98, 98, 100, 0.5); 
+}
+
+.changepw-bg .form input::placeholder {
+  color: #817f7f;
+  font-weight: bold;
+}
+
+.changepw-bg .form button {
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  font-family: 'GothicA1-Thin';
+  font-weight: bolder;
+  border: none;
+  border-radius: 15px;
+  background-image: linear-gradient(180deg, #e7616da6 0%, #fe5176e0 100%);
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.changepw-bg .form button:hover {
+  background-color: #ff004ca1;
+}
+
+.changepw-bg .error {
+  color: red;
+  height: 20px;
+  font-size: 14px;
+  margin-top: 5px;
+}

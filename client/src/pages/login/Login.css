@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'GothicA1-Bold';
+    src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'KimjungchulGothic';
+    src: url('../../fonts/KimjungchulGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+.login-container .container {
+    width: 750px; 
+    display: flex;
+    background-color: #ffffffc0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+/* 왼쪽 이미지 */
+.login-container .image-section img {
+    width: 100%; 
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* 오른쪽 로그인 부분 */
+.login-container .login-section {
+    width: 65%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 로그인 타이틀 */
+.login-container .login-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.login-container .login-header img {
+    position: relative;
+    top: -1px;
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+}
+
+.login-container .login-header span {
+    font-family: 'GothicA1-Bold';
+    font-size: 27px;
+    font-weight: bold;
+    color: #675C58;
+    margin-top: 3px;
+}
+
+.login-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container form input {
+    width: 80%;
+    margin: 3px 0;
+    padding: 0.5rem;
+    border-radius: 15px;
+    border: 1px solid #e3e4e4;
+    background-color: white;
+    box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+}
+
+.login-container form input:hover {
+    box-shadow: 0 0 5px rgba(98, 98, 100, 0.5); 
+}
+
+.login-container form input::placeholder {
+    font-family: 'GothicA1-Bold';
+    font-size: 12px;
+}
+
+.login-container form button {
+    width: 80%;
+    margin: 0.5rem;
+    margin-top: 15px;
+    padding: 0.5rem;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    background-image: linear-gradient(180deg, #e7616da6 0%, #fe5176e0 100%);
+    box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'KimjungchulGothic';
+}
+
+.login-container form button:hover {
+    background-color: #ff004ca1;
+}
+
+/* 회원가입, ID 찾기, PW 변경 버튼 */
+.login-container .links {
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.login-container .link-button {
+    border: none;
+    font: inherit;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #675C58;
+    background-color: transparent;
+    text-decoration: underline; 
+}
+
+.login-container .link-button:hover {
+    color: #14325280; 
+}

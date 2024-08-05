@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'GothicA1-Thin';
+  src: url('../../fonts/GothicA1-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.report-list-container {
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 0 0 0;
+  border-radius: 20px;
+  max-width: 930px;
+  margin: 20px auto; 
+}
+
+.reportContent {
+    padding: 20px;
+  }
+  
+.report-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden; 
+}
+
+.report-list tbody {
+  background-color: #fdfbfbea;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+}
+
+.report-list th, .report-list td {
+  border: 1px solid white;
+  padding: 8px;
+  font-weight: bold;
+  font-family: 'GothicA1-Thin';
+}
+
+.report-list th {
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedeed0 100%);
+}
+
+.report-list tr:hover {
+  cursor: pointer;
+  background-color: #dfe9f35d;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 5px;
+    padding: 5px;
+  }
+
+.searchBar input {
+  padding-left: 10px;
+  font-size: 16px;
+  margin: 0px 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+}
+
+.searchBar input:hover {
+  box-shadow: 0 0 5px rgba(98, 98, 100, 0.5); 
+}
+
+.searchBar input::placeholder {
+  font-weight: 900;
+  font-family: 'GothicA1-Thin';
+  padding: 10px;
+  font-size: 16px;
+}
+
+.searchBar button {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 900;
+  border: none;
+  border-radius: 20px;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedeed0 100%);
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+  cursor: pointer;
+  margin-right: 10px;
+  font-family: 'GothicA1-Bold';
+}
+
+.searchBar button:hover {
+  background-color: #7ea0ceda;
+}
+
+.table-container {
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 930px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    font-size: 20px;
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+  }
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 5px;
+}
+  

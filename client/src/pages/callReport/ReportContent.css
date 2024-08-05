@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'KimjungchulGothic';
+  src: url('../../fonts/KimjungchulGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.Details {
+    padding: 20px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #f5f5f5c0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; 
+    text-align: center; 
+  }
+  
+.Details h1 {
+    margin-bottom: 20px;
+    margin-top: 15px;
+    font-family: 'KimjungchulGothic';
+    font-size: 40px;
+    color: #222f68;
+  }
+  
+.detail-contents {
+    background-color: #f9f9f9dc;
+    padding: 30px; 
+    border-radius: 10px;
+    text-align: left;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    font-family: 'KimjungchulGothic';
+  }
+  
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: #fff; 
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 15px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+  }
+  
+.detail-item label {
+    font-weight: bold;
+    color: #222f68;
+    min-width: 100px;
+    text-align: center;
+  }
+  
+.detail-item span {
+    flex: 1;
+    text-align: left;
+    color: #000000;
+  }
+ 
+.detail-item-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.detail-item-row .detail-item {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+.detail-item-row .detail-item:last-child {
+    margin-right: 0;
+  }
+
+  .detail-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .detail-item label {
+    font-weight: bold;
+    margin-right: 10px;
+    min-width: 100px; 
+  }
+  
+  .detail-item audio {
+    margin-right: 15px;
+    flex: 1;
+  }
+  .detail-item a button {
+    background-color: #222f68;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition-duration: 0.4s;
+  }
+
+.list-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+.list-button-container p {
+    margin-top: 13px;
+    font-size: 20px;
+    color: #222f68;
+    font-family: 'GothicA1-Bold';
+    font-weight: bold;
+  }
+  
+.toList-button {
+    display: inline-block;
+    margin-top: 10px;
+    width: 60px; 
+    height:60px; 
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+  }
+  
+.toList-button:hover {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }

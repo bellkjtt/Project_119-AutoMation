@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'GothicA1-Thin';
+  src: url('../../../fonts/GothicA1-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.notice-wrapper {
+  position: absolute;
+  top: 530px;
+  width: 800px;
+  height: 200px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.notice-wrapper h3 {
+  font-weight: bold;
+  font-family: 'GothicA1-Bold';
+}
+
+.notice-wrapper button {
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+}
+
+.notice-wrapper button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.notice-wrapper .table-wrapper {
+  overflow: hidden;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.notice-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.notice-wrapper table th {
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedeed0 100%);
+}
+
+.notice-wrapper table tr {
+  height: 30px;
+}
+
+.notice-wrapper table tr:hover {
+  cursor: pointer;
+  background-color: #e6eaed;
+}
+
+.notice-wrapper table td {
+  text-align: center;
+  padding: 0 10px;
+}
+
+.notice-wrapper tbody {
+  background-color: #fdfbfbea;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+}

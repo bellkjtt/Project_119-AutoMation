@@ -1,0 +1,163 @@
+@font-face {
+  font-family: 'KimjungchulGothic';
+  src: url('../../fonts/KimjungchulGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothicA1-Thin';
+  src: url('../../fonts/GothicA1-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.signupContainer {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signupContainer .backContainer {
+  width: 750px;
+  height: 500px;
+  border-radius: 30px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.signupContainer form {
+  width: 500px;
+  padding: 20px;
+  border-radius: 30px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signupContainer form > div {
+  width: 100%;
+}
+
+/* 회원가입 문구 */
+.signupContainer h4 {
+  margin: 20px 0;
+  text-align: center;
+  font-family: 'KimjungchulGothic';
+  font-size: 30px;
+  font-weight: bold;
+  color: #675C58;
+}
+
+/* 이름 아이디 */
+.signupContainer .inlineFieldContainer {
+  gap: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.signupContainer .inlineFieldContainer > div {
+  width: 50%;
+}
+
+/* label css */
+.signupContainer label {
+  padding: 2px 6px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #d2d5d6d0 100%);
+  box-shadow: rgba(97, 97, 97, 0.178) 0px 5px 15px;
+}
+
+/* input css */
+.signupContainer input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #f1f5f6;
+  background-color: white;
+  box-shadow: rgba(51, 51, 51, 0.144) 0px 5px 15px;
+}
+
+.signupContainer input:hover {
+  box-shadow: 0 0 5px rgba(98, 98, 100, 0.5); 
+}
+
+.signupContainer input::placeholder {
+  color: #817f7f;
+  font-weight: bold;
+  font-family: 'GothicA1-Bold';
+}
+
+/* button css */
+.signupContainer button {
+  padding: 10px;
+  color: white;
+  font-size: 17px;
+  font-family: 'GothicA1-Thin';
+  border: none;
+  font-weight: bold;
+  text-align: center;
+  background-image: linear-gradient(180deg, #e7616da6 0%, #fe5176e0 100%);
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+  cursor: pointer;
+}
+
+.signupContainer button:hover {
+  background-color: #ff004ca1;
+}
+
+.signupContainer .fieldContainer input {
+  display: block;
+  margin-bottom: 2px; 
+}
+
+/* email section */
+.signupContainer .emailContainer {
+  gap: 20px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+}
+
+.signupContainer .emailContainer input {
+  width: 80%;
+  height: 38px;
+}
+
+.signupContainer .emailContainer button {
+  flex: 1;
+  height: 38px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+/* 아이디 중복 확인 */
+.signupContainer .msg {
+  height: 10px;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+/* 가입 버튼 */
+.signupContainer .submitBtn {
+  width: 500px;
+  margin: 20px 0;
+  border-radius: 15px;
+}

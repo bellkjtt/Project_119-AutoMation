@@ -1,0 +1,146 @@
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'KimjungchulGothic';
+  src: url('../../fonts/KimjungchulGothic-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.findid-bg {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.findid-bg .backContainer {
+  width: 750px;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+}
+
+.findid-bg .formContainer {
+  width: 500px;
+  height: 250px;
+  border-radius: 30px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 아이디 찾기 타이틀 */
+.findid-bg h2 {
+  font-family: 'KimjungchulGothic';
+  font-size: 34px;
+  font-weight: bold;
+  color: #675C58;
+  margin-bottom: 20px;
+}
+
+/* 이메일 정보를 입력해 주십시오. */
+.findid-bg h4 {
+  font-size: 18px;
+  color: #675C58;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.findid-bg .form {
+  gap: 10px;
+  width: 400px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* 이메일, 인증번호 라벨 */
+.findid-bg .form label {
+  width: 70px;
+  height: 35px;
+  border: none;
+  font-size: 13px;
+  line-height: 35px;
+  font-weight: bold;
+  text-align: center;
+  color: black;
+  border-radius: 165px;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #d2d5d6d0 100%);
+  box-shadow: rgba(97, 97, 97, 0.35) 0px 5px 15px;
+}
+
+/* input */
+.findid-bg .form input {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid #f1f5f6;
+  background-color: white;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+}
+
+.findid-bg .form input:hover {
+  box-shadow: 0 0 5px rgba(98, 98, 100, 0.5); 
+}
+
+.findid-bg .form input::placeholder {
+  color: #817f7f;
+  font-weight: bold;
+}
+
+/* 인증메일 발송, 확인 버튼 */
+.findid-bg button:not(.login) {
+  width: 400px;
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+  font-family: 'GothicA1-Thin';
+  font-weight: bolder;
+  border: none;
+  border-radius: 15px;
+  background-image: linear-gradient(180deg, #e7616da6 0%, #fe5176e0 100%);
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.findid-bg button:not(.login):hover {
+  background-color: #ff004ca1;
+}
+
+/* 아이디 결과 */
+.findid-bg .id-result {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+/* 로그인 페이지 이동 버튼 */
+.findid-bg .login {
+  padding: 5px 10px;
+  margin-top: 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: bold;
+  border: none;
+  background-color: #675C58;
+  cursor: pointer;
+}
+

@@ -1,0 +1,134 @@
+@font-face {
+  font-family: 'GothicA1-Thin';
+  src: url('../../fonts/GothicA1-Thin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothicA1-Bold';
+  src: url('../../fonts/GothicA1-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.notice-container {
+  width: 930px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  border-radius: 20px;
+  padding-bottom: 3px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notice-header {
+  height: 80px;
+  max-width: 930px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.notice-header > div {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* 검색어 input */
+.notice-header > div input {
+  width: 640px;
+  height: 40px;
+  font-size: 16px;
+  padding-left: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: white;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+  /* margin: 0px 10px; */
+}
+
+.notice-header > div input:hover {
+  box-shadow: 0 0 5px rgba(98, 98, 100, 0.5); 
+}
+
+.notice-header > div input::placeholder {
+  font-weight: 900;
+  font-family: 'GothicA1-Thin';
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* 검색 & 글쓰기 버튼 */
+.notice-header button {
+  height: 40px;
+  font-size: 16px;
+  font-weight: 900;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(51, 51, 51, 0.35) 0px 5px 15px;
+  font-family: 'GothicA1-Bold';
+
+  /* padding: 8px 16px;
+  margin-right: 10px; */
+}
+
+/* 검색 버튼 */
+.notice-header > div button {
+  width: 100px;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedeed0 100%);
+}
+
+.notice-header > div button:hover {
+  background-color: #7ea0ceda;
+}
+
+/* 글쓰기 버튼 */
+.notice-header .write {
+  width: 120px;
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #7e9fce9f 100%);
+}
+
+.notice-header .write:hover {
+  background-color: #0f2f4e86;
+}
+
+.notice-container .container {
+  padding: 30px;
+}
+
+.notice-content {
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffffc0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 930px;
+}
+
+.notice-container table {
+  width: 100%;
+  border-radius: 20px;
+  border-collapse: collapse;
+  overflow: hidden;
+  background-color: #fdfbfbea;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.notice-container th, .notice-container td {
+  border: 1px solid white;
+  padding: 8px;
+  font-weight: bold;
+  font-family: 'GothicA1-Thin';
+}
+
+.notice-container th {
+  background-image: linear-gradient(180deg, #fdfbfb 0%, #ebedeed0 100%);
+}
+
+.notice-container tr:hover {
+  cursor: pointer;
+  background-color: #dfe9f35d;
+}

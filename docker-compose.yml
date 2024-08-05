@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./AIVLE_Backend:/app/AIVLE_Backend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    depends_on:
+      - backend
+
+  socketio:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    command: python AIVLE_Backend/socketio_server/server.py
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
