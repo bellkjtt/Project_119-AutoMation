@@ -30,7 +30,9 @@ SECRET_KEY = "django-insecure-7&xn=^%mc@2gxlw(z=a-ybgb0nslzs%l7l34!p5!!cz@c*x38*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'backend', 'frontend']
+
+
 
 
 # Application definition
@@ -88,12 +90,12 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "DB.sqlite3",
-    }
-}
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "DB.sqlite3",
+#     }
+# }
 
 
 # Password validation
@@ -183,6 +185,7 @@ CACHES = {
 CORS_ALLOW_CREDENTIALS = True
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
+    'http://frontend:3000',
 ]
 
 # 파일 저장 위치

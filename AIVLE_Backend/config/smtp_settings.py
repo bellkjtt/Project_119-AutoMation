@@ -1,11 +1,14 @@
 # config/smtp_settings.py
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',  # DB 엔진 SQLite 사용
-        'NAME': 'DB.sqlite3',                   # DB 이름
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'DB.sqlite3',  # 컨테이너 내 경로와 일치하도록 수정
     }
 }
+
 
 #  JWT 시크릿 키 설정
 SECRET_KEY = {

@@ -22,10 +22,10 @@ COPY . /app
 RUN pip install --upgrade pip
 
 # Install PyAudio
-RUN pip install --no-cache-dir PyAudio
+RUN pip install PyAudio
 
 # Install other Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Expose the port
 EXPOSE 8000
