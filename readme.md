@@ -14,8 +14,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/yourusername/your-repo-name.git](https://github.com/bellkjtt/Project_119-AutoMation.git)
+cd Project_119-AutoMation
 ```
 
 ### Pull and Run the Docker Containers
