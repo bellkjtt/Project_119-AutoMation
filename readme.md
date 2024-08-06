@@ -57,7 +57,7 @@ services:
 ```
 
 4. ** you need to make .env file in frontend **
-## Docker 컨테이너 내부에서 `.env` 파일 생성하기
+#### Making  `.env` file in Docker containers
 
 Docker 컨테이너 내부에서 `.env` 파일을 생성하려면 다음 단계를 따르세요:
 
