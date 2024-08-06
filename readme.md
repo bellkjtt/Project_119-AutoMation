@@ -32,7 +32,7 @@ docker pull sikaro/aivle:frontend
 docker pull sikaro/aivle:socketio
 ```
 
-3. **You need to add ChatGPT API code to Backend env**
+3. **You need to add API code to Backend env**
 
 ```docker-compose.yml
  version: '3.8'
