@@ -1,11 +1,11 @@
-# Project Name
-
-Brief description of your project.
+# 119 AutoMation Project Final Code
 
 ## Prerequisites
 
 - Docker
 - Docker Compose (optional, if you're using it)
+- Node.js
+- Anaconda Prompt with Python 3.9.18
 
 ## Getting Started
 
@@ -13,28 +13,98 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Clone the repository
 
-```
+```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 ```
 
-### Build the Docker image
+### Build and Push the Docker Images
 
-```
-docker build -t sikaro/aivle:multiport .
+1. **Login to Docker Hub** (if not already logged in):
+
+    ```bash
+    docker login
+    ```
+
+2. **Build the Docker images**:
+
+    ```bash
+    docker build -t sikaro/aivle:backend -f Dockerfile.backend .
+    docker build -t sikaro/aivle:frontend -f Dockerfile.frontend .
+    docker build -t sikaro/aivle:socketio -f Dockerfile.backend .
+    ```
+
+3. **Push the Docker images to Docker Hub**:
+
+    ```bash
+    docker push sikaro/aivle:backend
+    docker push sikaro/aivle:frontend
+    docker push sikaro/aivle:socketio
+    ```
+
+### Run the Docker Containers
+
+To run the entire application using Docker Compose, create a `docker-compose.yml` file with the following content:
+
+```yaml
+version: '3.8'
+
+services:
+  backend:
+    image: sikaro/aivle:backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./AIVLE_Backend:/app/AIVLE_Backend
+    networks:
+      - app-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    image: sikaro/aivle:frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      - REACT_APP_BACKEND_URL=http://host.docker.internal:8000
+      - REACT_APP_SOCKETIO_URL=http://host.docker.internal:5000
+
+  socketio:
+    image: sikaro/aivle:socketio
+    command: python AIVLE_Backend/socketio_server/server.py
+    ports:
+      - "5000:5000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+networks:
+  app-network:
+    driver: bridge
 ```
 
-### Run the Docker container
+Then, run the following command to start the containers:
 
-```
-docker run -p 3000:3000 -p 8000:8000 -p 5000:5000 sikaro/aivle:multiport
+```bash
+docker-compose up
 ```
 
 ## Accessing the Application
 
-- React Frontend: http://localhost:3000
-- Django Backend: http://localhost:8000
-- WebSocket Server: ws://localhost:5000
+- React Frontend: [http://localhost:3000](http://localhost:3000)
+- Django Backend: [http://localhost:8000](http://localhost:8000)
+- WebSocket Server: `ws://localhost:5000`
 
 ## Project Structure
 
@@ -44,50 +114,61 @@ Briefly explain the structure of your project, main components, etc.
 
 Instructions for setting up a development environment, if different from the Docker setup.
 
+### Local Environment Setup
+
+To run the project in a local environment using Anaconda Prompt and Node.js, follow these steps:
+
+1. **Admin Credentials**:
+    - 관리자id: admin
+    - 관리자 비밀번호: Aivle16!!
+
+2. **Terminal Setup**:
+    - Open three terminals for running different parts of the project.
+
+3. **Terminal 1**: Running the Django Backend
+    - Navigate to the `AIVLE_Backend` folder:
+    ```bash
+    cd AIVLE_Backend
+    ```
+    - Run the Django development server:
+    ```bash
+    python manage.py runserver
+    ```
+
+4. **Terminal 2**: Running the WebSocket Server
+    - Navigate to the `AIVLE_Backend/socketio_server` folder:
+    ```bash
+    cd AIVLE_Backend/socketio_server
+    ```
+    - Run the WebSocket server:
+    ```bash
+    python server.py
+    ```
+
+5. **Terminal 3**: Running the React Frontend
+    - Navigate to the `client` folder:
+    ```bash
+    cd client
+    ```
+    - Install dependencies:
+    ```bash
+    npm i --force
+    ```
+    - Start the React development server:
+    ```bash
+    npm start
+    ```
+
+6. **Access the React Homepage**:
+    - Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system, if applicable.
 
 ## Built With
 
-- [React](https://reactjs.org/) - The web framework used
-- [Django](https://www.djangoproject.com/) - The backend framework
-- [WebSocket](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) - For real-time communication
-
-## Contributing
-
-Instructions for how to contribute to your project.
-
-## License
-
-This project is licensed under the [LICENSE NAME] - see the [LICENSE.md](LICENSE.md) file for details
-
-
-관리자id : admin
-관리자 비밀번호 : Aivle16!!
-
-진행환경 : anaconda prompt 가상환경 Python 3.9.18
-
-node js 설치 필요.
-
-기본적으로 로컬 환경에서 동작
-터미널 3개 필요
-
-터미널1
-AIVLE_Backend 폴더에서 
-python manage.py runserver
-
-터미널2
-AILVE_Backend/soketio_server 폴더에서
-python server.py
-
-터미널3
-client 폴더에서 
-
-npm i --force
-
-후에
-
-npm start
-
-리액트 홈페이지 동작
+- [React](https://reactjs.org/)
+- [Django](https://www.djangoproject.com/)
+- [Socket.IO](https://socket.io/)
+- [Docker](https://www.docker.com/)
