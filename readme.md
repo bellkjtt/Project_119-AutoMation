@@ -52,6 +52,8 @@ services:
       - "host.docker.internal:host-gateway"
     environment:
       - OPENAI_API_KEY=<your-openai-api-key> #add it here
+      - KAKAO_API_KEY=<your-kakao-api-key> #add it here
+      - NAVER_API_KEY=<your-NAVER-api-key> #add it here
 ```
 
 4. **Run the Docker containers**:
