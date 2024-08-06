@@ -56,6 +56,45 @@ services:
       - NAVER_API_KEY=<your-NAVER-api-key> #add it here
 ```
 
+4. ** you need to make .env file in frontend **
+## Docker 컨테이너 내부에서 `.env` 파일 생성하기
+
+Docker 컨테이너 내부에서 `.env` 파일을 생성하려면 다음 단계를 따르세요:
+
+1) **컨테이너 내부로 진입하기**
+
+   먼저, 실행 중인 Docker 컨테이너 내부에 접근해야 합니다. 이를 위해 다음 명령어를 사용하십시오:
+   ```sh
+   docker-compose exec frontend bash
+   ```
+
+2) **`.env` 파일 생성하기**
+
+   컨테이너 내부에 진입한 후, 원하는 디렉토리로 이동하고 다음 명령어를 사용하여 `.env` 파일을 생성합니다:
+   ```sh
+   touch .env
+   ```
+
+3) **`.env` 파일 편집하기**
+
+   생성된 `.env` 파일을 편집하여 환경 변수를 추가합니다. 예를 들어, `nano` 편집기를 사용하여 파일을 열고 편집할 수 있습니다:
+   ```sh
+   nano .env
+   ```
+   `.env` 파일에 환경 변수를 추가
+   ```
+   REACT_APP_USER_SERVER_URL=http://localhost:8000/account/
+   REACT_APP_POST_SERVER_URL=http://localhost:8000/post/
+   REACT_APP_SERVER_URL=http://localhost:8000/
+   ```
+
+4) **변경 사항 저장하기**
+
+   편집을 마친 후, `Ctrl + X`를 누르고 `Y`를 입력하여 파일을 저장한 후 `Enter`를 누릅니다.
+
+이제 `.env` 파일이 생성되고 설정되었습니다. 필요한 환경 변수를 이 파일에 추가하여 사용할 수 있습니다.
+
+
 4. **Run the Docker containers**:
 ```bash
 docker-compose up
