@@ -38,7 +38,7 @@ def audio_data(sid, data):
         files = {'audio': fp}
         print("view 호출")
         try:
-            response = requests.post('http://127.0.0.1:8000/stt/process_audio/', files=files)
+            response = requests.post('http://backend:8000/stt/process_audio/', files=files)
         except Exception as e:
             print("Django 뷰 호출 중 예외 발생:", str(e))
             return

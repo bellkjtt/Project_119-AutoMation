@@ -10,7 +10,7 @@ import CallModal from '../../components/call/CallModal';
 import { GoBackBtn } from '../../components/CommonStyles';
 import { getReportById } from '../../apis/report';
 
-const socket = io('http://localhost:5000', {
+const socket = io('ws://localhost:5000', {
   transports: ['websocket']
 });
 
